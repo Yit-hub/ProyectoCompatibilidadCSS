@@ -4,23 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pizzería La Buena Pizza</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <ul class="navbar">
-        <img src="" alt="Descripción del logo">
-        <li class="seccion"><a class="active" href="#news">Carta</a></li>
-        <li class="seccion"><a href="#contact">Sobre Nosotros</a></li>
-        <li class="seccion"><a href="#about">Politicas de la empresa</a></li>
-    </ul>
-    <div>
-        <img src="https://imgs.search.brave.com/yL3yvOo-dmwMVKNWGslybhLbPplajb5QM2UXWtkg5eQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/Z2FtZXMtYW5kLXBp/enphLmpwZz93aWR0/aD0xMDAwJmZvcm1h/dD1wanBnJmV4aWY9/MCZpcHRjPTA"
-            alt="texto_alternativo">
-    </div>
+    <header>
+        <ul class="navbar">
+            <li>
+                <a href="index.html" class="logo-container">
+                    <img src="https://thumbs.dreamstime.com/b/icono-plano-de-la-pizza-con-el-fondo-rojo-90899630.jpg" alt="Descripción de la imagen">
+                    <span class="logo-text">La Buena Pizza</span>
+                </a>
+            </li>
+            <li class="seccion"><a class="active" href="index.html">Carta</a></li>
+            <li class="seccion"><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+            <li class="seccion"><a href="politica.html">Políticas de la Empresa</a></li>
+        </ul>
+    </header>
 
-    <a href="#Carta"><button class="button">Carta</button></a>
+    <!-- Imagen destacada de la pizzería -->
+    <div class="banner"></div>
+
+    <!-- Sección de la carta -->
+     <h1 class="titulo-principal">LA BUENA PIZZA</h1>
+    <section class="titulo" id="carta">
+        <h2>Nuestra Carta</h2>
+        <p>Descubre nuestras deliciosas pizzas, elaboradas con ingredientes frescos y de alta calidad. Algunas de nuestras especialidades:</p>
+
+        <!-- Contenedor de productos (grid con fallback) -->
+        <div class="carta">
+            <div class="producto">
+                <h3>Pizza Margarita</h3>
+                <p>Salsa de tomate, mozzarella y albahaca fresca.</p>
+                <img src="https://images.stockcake.com/public/8/b/0/8b05d254-ea8a-4d7d-af7a-b596ea5fc64a_medium/delicious-margherita-pizza-stockcake.jpg">
+            </div>
+            <div class="producto">
+                <h3>Pizza Pepperoni</h3>
+                <p>Salsa de tomate, mozzarella y pepperoni ahumado.</p>
+                <img src="https://www.readyseteat.com/sites/g/files/qyyrlu501/files/uploadedImages/img_6941_6018.JPEG" alt="">
+            </div>
+            <div class="producto">
+                <h3>Pizza Cuatro Quesos</h3>
+                <p>Mezcla de mozzarella, gorgonzola, parmesano y cheddar.</p>
+                <img src="https://pizzarica.wordpress.com/wp-content/uploads/2015/04/pizza-cuatro-quesos-sin-gluten-800x665.jpg?w=256&h=256&crop=1">
+            </div>
+            <div class="producto">
+                <h3>Pizza Vegetariana</h3>
+                <p>Pimientos, champiñones, cebolla y aceitunas.</p>
+                <img src="https://lapajara.coopcycle.org/media/cache/product_thumbnail/60/ae/60ae84b7cc063.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Pizzería La Buena Pizza. Todos los derechos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Carta</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="politica.html">Políticas de la Empresa</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>

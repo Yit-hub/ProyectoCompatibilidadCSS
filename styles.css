@@ -1,50 +1,166 @@
-:root{
-    --color-base: #b40000;
-
+:root {
+  --color-base: #b40000; /* Color base */
 }
 
-
-.button {
-    transition-duration: 0.4s;
-    border: none;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 100px;
-    margin-left: 45%;
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #f9f9f9; /* Color de fondo */
 }
 
-.button:hover {
-    background-color: var(--color-base,rgb(255, 255, 255));
-    /* Green */
-    color: white;
+h1, h2, h3 {
+  color: var(--color-base);
 }
 
+p {
+  line-height: 1.6; /* Espaciado de líneas */
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px; /* Ancho máximo del contenedor */
+  margin: auto; /* Centrado automático */
+  background: white; /* Color de fondo del contenedor */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(233, 22, 22, 0.1); /* Sombra del contenedor */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para la barra de navegación */
 .navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #b40000;
-    
-  }
-  
-li {
-    float :left 
+  list-style: none; /* Sin viñetas */
+  display: flex; /* Flexbox para disposición horizontal */
+  justify-content: space-around; /* Espacio igual entre elementos */
+  align-items: center; /* Alinear verticalmente */
+  background-color: var(--color-base); /* Color de fondo de la navbar */
+  padding: 10px; /* Espaciado interno */
+  margin: 0; /* Sin margen */
 }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+
+.navbar img {
+  height: 50px; /* Altura del logo */
+}
+
+.navbar li {
+  display: inline; /* Elementos de lista en línea */
+}
+
+.navbar li a {
+  color: white; /* Color del texto de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+  padding: 10px 20px; /* Espaciado interno para enlaces */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.navbar li a.active,
+.navbar li a:hover {
+  background-color: #8b0606; /* Color de fondo al pasar el ratón */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo de la banner */
+.banner {
+  text-align: center; /* Centrado del texto */
+  padding: 20px; /* Espaciado interno */
+  background-image: url('https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2021/03/familia-comiendo-pizza-2262401.jpg'); /* Imagen de fondo */
+  background-size: cover; /* Cubrir el área del div */
+  background-position: center; /* Centrado de la imagen */
+  background-repeat: no-repeat; /* Sin repetición */
+  height: 400px; /* Altura del banner */
+  margin-bottom: 60px; /* Margen inferior */
+}
+
+/* Estilo de la carta de productos (fallback para navegadores sin grid) */
+.carta {
+  display: flex; /* Flexbox para disposición vertical */
+  flex-direction: column; /* Dirección de los elementos */
+  gap: 10px; /* Espacio entre elementos */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Implementación de display: grid solo para navegadores compatibles */
+@supports (display: grid) {
+  .carta {
+      display: grid; /* Usar grid para diseño */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas adaptativas */
+      gap: 20px; /* Espacio entre columnas */
   }
-  
-  li a:hover:not(.active) {
-    background-color: #8b0606;
-  }
-  
-  .active {
-    background-color: #8b0606;
-  }
+}
+
+/* Producto individual */
+.producto {
+  border: 1px solid #ddd; /* Borde del producto */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno */
+  background-color: #fff; /* Fondo blanco */
+  text-align: center; /* Centrado del texto */
+}
+
+.producto h3::first-letter {
+  color: var(--color-base);
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+
+.producto p {
+  font-size: 0.9em; /* Tamaño de fuente para la descripción */
+}
+
+.titulo{
+  text-align: center; /* Centrado del contenido */
+}
+
+.titulo-principal{
+  text-align: center; /* Centrado del contenido */
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 30px;
+}
+
+.sobreNosotros{
+  text-align: center; /* Centrado del contenido */
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #333; /* Fondo oscuro */
+  color: #fff; /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centrado del texto */
+}
+
+.footer-content {
+  max-width: 1200px; /* Ancho máximo del pie de página */
+  margin: 0 auto; /* Centrado automático */
+}
+
+.footer-links {
+  list-style: none; /* Sin viñetas */
+  padding: 0; /* Sin padding */
+}
+
+.footer-links li {
+  display: inline; /* Elementos de lista en línea */
+  margin: 0 15px; /* Espacio entre enlaces */
+}
+
+.footer-links a {
+  color: #fff; /* Color de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+
+img{
+  border-radius: 10%;
+}
