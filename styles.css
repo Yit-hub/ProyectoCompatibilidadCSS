@@ -1,13 +1,15 @@
+/* Definición de la variable CSS --color-base en el selector :root:
+   - Establece un color rojo oscuro (#b40000) para ser usado en todo el documento. */
 :root {
-  --color-base: #b40000; /* Color base */
+  --color-base: #b40000;
 }
 
 /* Estilos globales */
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  background-color: #f9f9f9;
   padding: 0;
-  background-color: #f9f9f9; /* Color de fondo */
+
 }
 
 h1, h2, h3 {
@@ -15,17 +17,17 @@ h1, h2, h3 {
 }
 
 p {
-  line-height: 1.6; /* Espaciado de líneas */
+  line-height: 1.6;
 }
 
-/* Contenedor principal */
+/* Estilos para el contenedor */
 .container {
-  max-width: 800px; /* Ancho máximo del contenedor */
-  margin: auto; /* Centrado automático */
-  background: white; /* Color de fondo del contenedor */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 2px 10px rgba(233, 22, 22, 0.1); /* Sombra del contenedor */
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px; 
+  box-shadow: 0 2px 10px rgba(233, 22, 22, 0.1); 
 }
 
 .logo-container {
@@ -35,55 +37,56 @@ p {
 
 /* Estilos para la barra de navegación */
 .navbar {
-  list-style: none; /* Sin viñetas */
-  display: flex; /* Flexbox para disposición horizontal */
-  justify-content: space-around; /* Espacio igual entre elementos */
-  align-items: center; /* Alinear verticalmente */
-  background-color: var(--color-base); /* Color de fondo de la navbar */
-  padding: 10px; /* Espaciado interno */
-  margin: 0; /* Sin margen */
+  list-style: none; 
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  background-color: var(--color-base); 
+  padding: 10px; 
+  margin: 0; 
 }
 
 .navbar img {
-  height: 50px; /* Altura del logo */
+  height: 50px; 
 }
 
 .navbar li {
-  display: inline; /* Elementos de lista en línea */
+  display: inline; 
 }
 
 .navbar li a {
-  color: white; /* Color del texto de los enlaces */
-  text-decoration: none; /* Sin subrayado */
-  padding: 10px 20px; /* Espaciado interno para enlaces */
-  transition: background-color 0.3s ease; /* Transición suave */
+  color: white; 
+  text-decoration: none; 
+  padding: 10px 20px; 
+  transition: background-color 0.3s ease;
 }
 
 .navbar li a.active,
 .navbar li a:hover {
-  background-color: #8b0606; /* Color de fondo al pasar el ratón */
-  border-radius: 5px; /* Bordes redondeados */
+  background-color: #8b0606;
+  border-radius: 5px;
 }
 
 /* Estilo de la banner */
 .banner {
-  text-align: center; /* Centrado del texto */
-  padding: 20px; /* Espaciado interno */
+  text-align: center; 
+  padding: 20px;
   background-image: url('https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2021/03/familia-comiendo-pizza-2262401.jpg'); /* Imagen de fondo */
-  background-size: cover; /* Cubrir el área del div */
-  background-position: center; /* Centrado de la imagen */
-  background-repeat: no-repeat; /* Sin repetición */
-  height: 400px; /* Altura del banner */
-  margin-bottom: 60px; /* Margen inferior */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  height: 400px; 
+  margin-bottom: 60px; 
 }
 
 /* Estilo de la carta de productos (fallback para navegadores sin grid) */
 .carta {
-  display: flex; /* Flexbox para disposición vertical */
-  flex-direction: column; /* Dirección de los elementos */
-  gap: 10px; /* Espacio entre elementos */
-  padding: 20px; /* Espaciado interno */
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+  padding: 20px; 
 }
+
 
 /* Implementación de display: grid solo para navegadores compatibles */
 @supports (display: grid) {
@@ -94,73 +97,88 @@ p {
   }
 }
 
-/* Producto individual */
+/* Estilos para la class producto*/
 .producto {
-  border: 1px solid #ddd; /* Borde del producto */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 15px; /* Espaciado interno */
-  background-color: #fff; /* Fondo blanco */
-  text-align: center; /* Centrado del texto */
-}
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  padding: 15px; 
+  background-color: #fff; 
+  text-align: center; 
+} 
 
+/* Estilo para la primera letra del título h3 dentro de .producto/
+   /* Uso de pseudo-elemento*/
 .producto h3::first-letter {
   color: var(--color-base);
   font-size: 1.7em;
   font-weight: bold;
 }
 
-
-.producto p {
-  font-size: 0.9em; /* Tamaño de fuente para la descripción */
+.producto {
+  font-size: 0.9em;
 }
 
+/* Estilos para la class titulo*/
 .titulo{
-  text-align: center; /* Centrado del contenido */
+  text-align: center; 
 }
 
 .titulo-principal{
-  text-align: center; /* Centrado del contenido */
+  color: #8b0606;
+  text-align: center; 
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-bottom: 30px;
 }
 
+/* Estilos para la class sobreNosotros*/
 .sobreNosotros{
-  text-align: center; /* Centrado del contenido */
+  text-align: center; 
 }
 
 /* Estilos para el pie de página */
 footer {
-  background-color: #333; /* Fondo oscuro */
-  color: #fff; /* Color del texto */
-  padding: 20px; /* Espaciado interno */
-  text-align: center; /* Centrado del texto */
+  background-color: #333; 
+  color: #fff; 
+  padding: 20px; 
+  text-align: center; 
 }
 
+/* Contenedor del pie de página .footer-content*/
 .footer-content {
-  max-width: 1200px; /* Ancho máximo del pie de página */
-  margin: 0 auto; /* Centrado automático */
+  max-width: 1200px;
+  margin: 0 auto; 
 }
 
+/* Estilo para la lista de enlaces en .footer-links:*/
 .footer-links {
-  list-style: none; /* Sin viñetas */
-  padding: 0; /* Sin padding */
+  list-style: none; 
+  padding: 0; 
 }
 
+/* Estilo para los elementos de la lista dentro de .footer-links:
+   - Los elementos de la lista se muestran en línea, no en bloque.
+   - Se aplica un margen horizontal de 15px entre los elementos. */
 .footer-links li {
-  display: inline; /* Elementos de lista en línea */
-  margin: 0 15px; /* Espacio entre enlaces */
+  display: inline; 
+  margin: 0 15px; 
 }
 
-.footer-links a {
-  color: #fff; /* Color de los enlaces */
-  text-decoration: none; /* Sin subrayado */
-}
 
+/* Estilo para los enlaces dentro del contenedor .footer-links:
+   - El color del texto se establece en blanco (#fff).
+   - Se elimina cualquier subrayado predeterminado de los enlaces. */
+   .footer-links a {
+    color: #fff; 
+    text-decoration: none; 
+  }
+
+/* Cuando el usuario pasa el ratón sobre un enlace dentro del contenedor .footer-links, se subraya el texto */
+ /* Uso de pseudo-clase*/
 .footer-links a:hover {
-  text-decoration: underline; /* Subrayado al pasar el ratón */
+  text-decoration: underline;
 }
-
 
 img{
   border-radius: 10%;
 }
+
